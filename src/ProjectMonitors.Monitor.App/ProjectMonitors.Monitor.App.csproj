@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="ProjectIndustries.KingHttpClient" Version="0.1.29" />
+        <PackageReference Include="AngleSharp" Version="0.16.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\ProjectMonitors.Monitor.Domain\ProjectMonitors.Monitor.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

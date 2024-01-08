@@ -1,0 +1,10 @@
+﻿version: '2.2'
+
+services:
+  monitor:
+    image: docker.pkg.github.com/bandar-monitors/monitors/monitor:latest
+    environment:
+      MONITORS_SLUG: amazon
+      MONITORS_APPNAME: amazon
+      ConnectionStrings:PostgreSQL: "Server=localhost;Port=15432;Database=monitors;Username=monitors;Password=monitors;"
+      ConnectionStrings:RabbitMq: "amqp://monitors:monitors@localhost:5672/"

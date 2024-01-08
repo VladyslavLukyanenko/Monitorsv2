@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Discord.Net" Version="2.4.0" />
+        <PackageReference Include="Discord.Net.Commands" Version="2.4.0" />
+        <PackageReference Include="linq2db.PostgreSQL" Version="3.4.0">
+            <ExcludeAssets>contentFiles</ExcludeAssets>
+        </PackageReference>
+        <PackageReference Include="System.Data.SQLite" Version="1.0.114.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="serilogsettings.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ProjectMonitors.Monitor.Infra\ProjectMonitors.Monitor.Infra.csproj" />
+    </ItemGroup>
+
+</Project>

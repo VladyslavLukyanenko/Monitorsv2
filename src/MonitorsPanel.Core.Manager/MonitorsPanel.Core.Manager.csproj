@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK" Version="2.3.55.2" />
+    <PackageReference Include="Google.Apis.Compute.v1" Version="1.51.0.2336" />
+    <PackageReference Include="Docker.DotNet" Version="3.125.4" />
+  </ItemGroup>
+
+</Project>

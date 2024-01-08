@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="GitVersion.MsBuild" Version="5.6.10">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="CSharpFunctionalExtensions" Version="2.15.3" />
+        <PackageReference Include="linq2db" Version="3.4.0" />
+        <PackageReference Include="MessagePack" Version="2.2.85" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+        <PackageReference Include="OpenTelemetry" Version="1.1.0-beta2" />
+        <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.1.0-beta2" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.0.0-rc4" />
+        <PackageReference Include="RabbitMQ.Client" Version="6.2.1" />
+        <PackageReference Include="Serilog.Extensions.Hosting" Version="4.1.2" />
+        <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="5.0.1" />
+        <PackageReference Include="System.Reactive" Version="5.0.0" />
+        <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
+        <PackageReference Include="Serilog.Enrichers.Memory" Version="1.0.4" />
+
+        <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+        <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />
+        <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+        <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+        <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
+        <PackageReference Include="Serilog.Sinks.ColoredConsole" Version="3.0.1" />
+        <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.4.1" />
+        <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+        <PackageReference Include="Serilog" Version="2.10.0" />
+
+
+
+
+        <PackageReference Include="Elastic.Apm" Version="1.10.0" />
+        <PackageReference Include="Elastic.Apm.Extensions.Hosting" Version="1.10.0" />
+        <PackageReference Include="Elastic.Apm.NetCoreAll" Version="1.7.1" />
+        <PackageReference Include="Elastic.Apm.SerilogEnricher" Version="1.5.3" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="serilogsettings.json">
+        <Link>serilogsettings.json</Link>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+</Project>

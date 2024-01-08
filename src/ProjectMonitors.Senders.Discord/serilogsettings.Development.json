@@ -1,0 +1,3 @@
+﻿{
+  "Serilog:WriteTo:2:Args:nodeUris": "http://elastic:NotASecretPassword@localhost:9200"
+}

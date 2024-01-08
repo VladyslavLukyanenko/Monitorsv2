@@ -1,0 +1,27 @@
+using System;
+
+namespace MonitoringFakeShop
+{
+  public class Product
+  {
+    public static Product DemoProduct { get; } = new()
+    {
+      Id = ProductId,
+      IsAvailable = IsGloballyAvailable,
+      Name = "Fake Product",
+      Price = 9.99M,
+      ProductPic = "https://unsplash.com/photos/RnCPiXixooY",
+      Index = int.MinValue
+    };
+    
+    private static readonly Guid ProductId = Guid.NewGuid();
+    public static bool IsGloballyAvailable { get; set; }
+
+    public string ProductPic { get; set; }
+    public string Name { get; set; }
+    public Guid Id { get; set; }
+    public bool IsAvailable { get; set; }
+    public decimal Price { get; set; }
+    public int Index { get; set; }
+  }
+}

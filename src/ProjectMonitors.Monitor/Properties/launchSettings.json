@@ -1,0 +1,24 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "ProjectMonitors.Monitor": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+//        "LD_DEBUG": "all",
+        "MONITORS_APPNAME": "local____fake_shop",
+        "MONITORS_SLUG": "fake_shop"
+//        "COMPlus_DbgEnableMiniDump": "1",
+//        "COMPlus_DbgMiniDumpName": "/home/alantoo/Desktop/core.minidump.%p",
+//        "COMPlus_DbgMiniDumpType": "4",
+//        "COMPlus_EnableDiagnostics": "0",
+//        "COMPLUS_ReadyToRun": "0",
+//        "COMPlus_StressLog": "1",
+//        "COMPlus_LogLevel": "6",
+//        "COMPlus_LogFacility": "0x00080001",
+//        "COMPlus_StressLogSize": "2000000",
+//        "COMPlus_TotalStressLogSize": "40000000",
+      }
+    }
+  }
+}

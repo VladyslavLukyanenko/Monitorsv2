@@ -1,0 +1,57 @@
+﻿{
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Warning",
+      "Override": {
+        "Microsoft.Hosting.Lifetime": "Information",
+        "Elastic.Apm": "Error",
+        "ProjectMonitors": "Debug"
+      }
+    },
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName",
+      "WithProcessId",
+      "WithThreadId",
+      "WithClientIp",
+      "WithClientAgent",
+      "WithMemoryUsage"
+    ],
+    "WriteTo": [
+      {
+        "Name": "Async",
+        "Args": {
+          "configure": [
+            {
+              "Name": "RollingFile",
+              "Args": {
+                "pathFormat": "./logs/{Date}.json",
+                "formatter": "Serilog.Formatting.Json.JsonFormatter, Serilog",
+                "fileSizeLimitBytes": 104857600,
+                "retainedFileCountLimit": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Name": "ColoredConsole",
+        "Args": {
+          "outputTemplate": "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj} {Exception}{NewLine}"
+        }
+      },
+      {
+        "Name": "Elasticsearch",
+        "Args": {
+          "nodeUris": "http://elastic:3xveNbbetM28aG6pBEhtwCng@ec2-18-116-130-20.us-east-2.compute.amazonaws.com:9200",
+          "customFormatter": "Serilog.Formatting.Elasticsearch.ExceptionAsObjectJsonFormatter, Serilog.Formatting.Elasticsearch",
+          "inlineFields": true,
+          "connectionTimeout": 5,
+          "emitEventFailure": "WriteToSelfLog",
+          "queueSizeLimit": "100000",
+          "autoRegisterTemplate": true
+        }
+      }
+    ]
+  }
+}
